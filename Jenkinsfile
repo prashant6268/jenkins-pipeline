@@ -31,7 +31,7 @@ pipeline {
                 sh '''
                     docker run -d \
                       --name my-website \
-                      -p 8081:80 \
+                      -p 80:80 \
                       my-website:latest
                 '''
             }
@@ -47,3 +47,4 @@ pipeline {
             echo 'Docker deployment failed!'
         }
     }
+}
